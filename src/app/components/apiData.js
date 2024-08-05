@@ -76,8 +76,9 @@ export default function First() {
             ) : (
                 <div className={styles.container} ref={containerRef}>
                     {articles.map((article, index) => (
-                    <a href={article.url} target="_blank" rel="noopener noreferrer" className={styles.card}>
-                            <img src={article.urlToImage} alt={article.title} className={styles.image} />
+                    <a href={article.url} target="_blank" rel="noopener noreferrer" className={styles.card} key ={index} >
+             
+                            <img src={article.urlToImage} alt={article.title} className={styles.image}  />
                             <div className={styles.content}>
                                 <h4 className={styles.title}>{truncateText(article.title, 40)}</h4>
                                 <p className={styles.description}>{truncateText(article.description, 80)}</p>

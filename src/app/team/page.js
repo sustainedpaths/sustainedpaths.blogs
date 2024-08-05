@@ -74,7 +74,7 @@ export default function Home() {
                                             <span>Express</span>
                                             <span>Front End Developer</span>
                                         </div>
-                                        <i className={styles.quotes}>"I can do this whole day"</i>
+                                        <i className={styles.quotes}> &quot; I can do this whole day &quot; </i>
                                     </div>
                                     <div className={styles.socialsCard}>
                                         <a className={styles.githubBackground} href='#'><img src='/github.png' alt='Manjeet github' /></a>
@@ -99,7 +99,7 @@ export default function Home() {
                                             <span>Express</span>
                                             <span>Front End Developer</span>
                                         </div>
-                                        <i className={styles.quotes}>"Sweet but Pshycho"</i>
+                                        <i className={styles.quotes}> &quot; Sweet but Pshycho &quot; </i>
                                     </div>
                                     <div className={styles.socialsCard}>
                                         <a className={styles.githubBackground} href='#'><img src='/github.png' alt='archi github' /></a>
@@ -123,7 +123,7 @@ export default function Home() {
                                             <span>chota bheem</span>
                                             <span>Front End Developer</span>
                                         </div>
-                                        <i className={styles.quotes}>"Chim tamak tum tum"</i>
+                                        <i className={styles.quotes}> &quot; Chim tamak tum tum &quot; </i>
                                     </div>
                                     <div className={styles.socialsCard}>
                                         <a className={styles.githubBackground} href='#'><img src='/github.png' alt='riya github' /></a>
@@ -147,7 +147,7 @@ export default function Home() {
                                             <span>Communication</span>
                                             <span>Developer</span>
                                         </div>
-                                        <i className={styles.quotes}>"I am Batman"</i>
+                                        <i className={styles.quotes}> &quot; I am Batman &quot; </i>
                                     </div>
                                     <div className={styles.socialsCard}>
                                         <a className={styles.githubBackground} href='#'><img src='/github.png' alt='agrim github' /></a>
