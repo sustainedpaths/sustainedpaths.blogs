@@ -16,6 +16,7 @@
   background-size: contain;
   background-clip: text;
   -webkit-background-clip: text;
+  
 }
 .main{
   padding: 5rem 2rem 0 2rem;
@@ -83,6 +84,9 @@
   cursor: pointer;
   transition: all 0.3s ease-in;
 }
+.hronabout{
+  display: none;
+}
 
 @media (max-width:845px){
   .aboutgraphics{
@@ -98,6 +102,17 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+
+  }
+  .gradienttext {
+    text-align: center;
+  }
+  .hronabout{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
   }
 }
@@ -284,6 +299,14 @@ color: black;
 /*home page*/
 .homePage h2{
   padding: 3rem 0 1rem 0;
+}
+
+.centere{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 

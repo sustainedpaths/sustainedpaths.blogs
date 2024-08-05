@@ -18,6 +18,13 @@ export default function Home() {
         <div className={styles.aboutdescription}>
           <div className={styles.aboutcontent}>
             <h1 className={styles.gradienttext}>Sustainable Development and Its Goals</h1>
+
+            <div className={styles.hronabout}>
+            <hr style={{ width: '50%', textAlign: 'left', marginLeft: '0',  border:'1px solid orange' }} />
+            <br></br>
+            </div>
+
+
             <p>Sustainable development is an approach to growth that meets the needs of the present
               without compromising the ability of future generations to meet their own needs. It emphasizes
               a balance between economic progress, environmental protection, and social equity. The concept

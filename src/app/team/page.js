@@ -119,8 +119,8 @@ export default function Team() {
                                             <span>JavaScript</span>
                                             <span>React</span>
                                             <span>Wordpress</span>
-                                            <span>magic</span>
-                                            <span>chota bheem</span>
+                                            <span>canva</span>
+                                            <span>ar</span>
                                             <span>Front End Developer</span>
                                         </div>
                                         <i className={styles.quotes}> &quot; Chim tamak tum tum &quot; </i>

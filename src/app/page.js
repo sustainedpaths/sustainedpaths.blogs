@@ -9,6 +9,15 @@ const HomePage = () => {
     <main className={styles.main}>
       <div className={styles.description}>
         <div className={styles.homePage}>
+          <div className={styles.centere}>
+
+        
+        <h1 className={styles.gradienttext}>News Article Blogs</h1>
+        <hr style={{ width: '50%', textAlign: 'left', marginLeft: '0',  border:'1px solid orange' }} />
+        <br></br>
+        </div>
+
+
 
       <Datamain/>   
       <Moredata/>  
