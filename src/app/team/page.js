@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import styles from '../page.module.css';
-import Loader from '../components/Loader'; // Ensure correct import path
+import Loader from '../components/loader'; // Ensure correct import path
 
 export default function Home() {
     const [loading, setLoading] = useState(true);
@@ -47,6 +47,15 @@ export default function Home() {
                     <div className={styles.description}>
                         <div className={styles.ourteam}>
                             <h1 className={styles.gradienttext}>Meet Our Awesome Team</h1>
+                
+                           
+                            <hr style={{ width: '50%', textAlign: 'left', marginLeft: '0',  border:'1px solid orange' }} />
+                             <br></br>
+
+
+                            <div className={styles.flexme}>
+
+                            
                             <div className={styles.cardsContainer} ref={containerRef}>
                                 <div className={styles.cardcomp}>
                                     <div className={styles.imageContainer}>
@@ -146,6 +155,7 @@ export default function Home() {
                                         <a className={styles.codepenBackground} href='#'><img src='/codepen.png' alt='agrim codepen' /></a>
                                     </div>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>
