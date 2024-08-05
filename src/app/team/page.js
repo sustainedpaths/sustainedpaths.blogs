@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import styles from '../page.module.css';
 import Loader from '../components/loader'; // Ensure correct import path
 
-export default function Home() {
+export default function Team() {
     const [loading, setLoading] = useState(true);
     const containerRef = useRef(null);
 
@@ -43,7 +43,7 @@ export default function Home() {
             {loading ? (
                 <Loader isVisible={loading} />
             ) : (
-                <main className={styles.main}>
+                <main className={styles.main2}>
                     <div className={styles.description}>
                         <div className={styles.ourteam}>
                             <h1 className={styles.gradienttext}>Meet Our Awesome Team</h1>

@@ -3,10 +3,14 @@
 import styles from "../page.module.css";
 import Link from 'next/link';
 
+import Team from "../team/page"
+
 export default function Home() {
     const handleClick = () => {
-      alert('Button clicked!');
-      // Add more actions here
+      // alert('Button clicked!');
+      const element = document.getElementById('team');
+      element.scrollIntoView({ behavior: 'smooth' });
+
     };
   return (
     <main className={styles.main}>
@@ -28,6 +32,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div id="team">
+      <Team />
+
+      </div>
+      
     </main>
   );
 }

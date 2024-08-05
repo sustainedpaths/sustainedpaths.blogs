@@ -20,6 +20,9 @@
 .main{
   padding: 5rem 2rem 0 2rem;
 }
+.main2{
+  padding: 0rem 2rem 0 2rem;
+}
 .main{
   overflow: hidden;
 
@@ -81,6 +84,23 @@
   transition: all 0.3s ease-in;
 }
 
+@media (max-width:845px){
+  .aboutgraphics{
+    display: none;
+  }
+  .aboutdescription{
+    grid-template-columns: 1fr;
+    
+  }
+  .aboutcontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+}
 
 
 
