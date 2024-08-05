@@ -1,0 +1,66 @@
+/* apiData.module.css */
+.container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 250px;
+    overflow-x: hidden;
+    width: 100%;
+    grid-gap: 10px;
+    padding: 0 0 20px 0;
+    scroll-behavior: smooth;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    height: 50%;
+    object-fit: cover;
+}
+
+.content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;  
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+    margin: 0 0 10px;
+}
+
+.link {
+    font-size: 14px;
+    color: #0070f3;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+.articlecard{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.bottomAlign{
+    margin-top: auto;
+}

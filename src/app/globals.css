@@ -1,9 +1,18 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+--font-new: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
+--font-p : sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+--font-button : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -86,20 +95,26 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+background-color: white;
+font-family: var(--font-button);
+color: black;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
+.content-wrapper {
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+button:hover {
+  background-position: right;
+}
+/* Adjust based on the menu's open state */
+.content-wrapper.menu-open {
+  transform: translateX(250px); /* Slide the content when the menu is open */
+  /* Adjust the value as necessary to match the width of your sidebar/menu */
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

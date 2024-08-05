@@ -1,0 +1,80 @@
+nav{
+display: flex;
+align-items: center;
+    padding: 0 2rem;
+    position: fixed;
+    width: 100%;
+        border-bottom: 1px solid hsl(0, 0%, 95%);
+        box-shadow: 0 8px 8px -4px #f5c536;
+        color: black;
+        z-index: 1000;
+        backdrop-filter: blur(100px);
+}
+nav Link:hover{
+    color: blue;
+}
+nav a{
+    padding: 20px 10px;
+}
+.logo {
+    position: relative;
+  }
+nav button{
+    position: absolute;
+    top: 110%;
+    left: 0px;
+    display: none;
+    padding: 10px;
+    box-shadow: 5px 5px 8px -4px #f5c536;
+    background-color: white;
+    border: 1px solid #fdf3d5;
+
+}
+
+nav span{
+    display: flex;
+ align-items: center;
+}
+span h3{
+    padding-left: 5px;
+    font-size: 33px;
+}
+button img{
+    width: 30px;
+}
+
+Footer{
+    width: 100%;
+    padding: 0 2rem;
+    box-shadow: 0 -8px 8px -4px #f5c536;
+    border-top: 1px solid hsl(0, 0%, 95%);
+}
+Footer p{
+    padding: 10px 0;
+}
+
+
+
+
+@media (max-width:843px){
+    span h3{
+        display: none;
+    }
+}
+@media (max-width:642px){
+
+}
+@media (max-width:554px){
+    nav{
+        justify-content: space-between;
+        padding: 0.5rem 2rem;
+    }
+    nav button{
+        display: block;
+    }
+    span h3{
+        display: block;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+  }
