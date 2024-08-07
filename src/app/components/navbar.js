@@ -54,7 +54,7 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
         </div>
         <div className={Styless.forMobile}>
           <div className={Styless.greenDot}></div>
-          <Link href="/blogs">Blogs</Link>
+          <Link href="/#blogs">Blogs</Link>
           <img src='/right-chevron.png' alt='Arrow Icon' />
         </div>
         <div className={Styless.forMobile}>

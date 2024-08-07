@@ -62,7 +62,9 @@ Footer p{
     }
 }
 @media (max-width:642px){
-
+    nav{
+        padding: 0 15px 0 15px;
+      }
 }
 @media (max-width:554px){
     nav{

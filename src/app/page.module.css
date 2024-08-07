@@ -19,7 +19,7 @@
   
 }
 .main{
-  padding: 5rem 2rem 0 2rem;
+  padding: 5rem 2rem 2rem 2rem;
 }
 .main2{
   padding: 0rem 2rem 0 2rem;
@@ -32,7 +32,93 @@
   padding: 3rem 2rem 0rem 2rem;
   width: 100%;
 }
+@media (max-width:397px){
+  .main{
+    padding: 5rem 15px 15px 15px;
+  }
+}
 
+.createYourBlog button{
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 12px 16px;
+  margin: 2rem 0;
+  margin-top: auto;
+}
+.createYourBlog{
+  background-color: black;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 10px 10px 10px 3rem;
+  display: grid;
+  grid-template-columns: 1fr 0.50fr;
+}
+.homeGrid{
+  display: flex;
+  flex-direction: column;
+}
+.createYourBlog p{
+  color: white;
+  width: 80%;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+.createYourBlog img{
+  width: 100%;
+  max-width: 400px;
+}
+@media (max-width:1150px){
+  .createYourBlog{
+grid-template-columns: 1fr 0.8fr;
+  }
+  .imagegraphic{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-width:1007px){
+  .createYourBlog{
+grid-template-columns: 1fr;
+padding: 15px;
+  }
+  .imagegraphic{
+    display: none;
+  }
+  .createYourBlog p{
+    width: 100%;
+  }
+}
+
+
+
+
+/*reference styles*/
+.reference h2{
+  padding: 25px 0 10px 10px;
+}
+.reference p{
+  font-size: 18px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+}
+.reference a{
+  color: #f5c536;
+padding: 3rem;
+}
+@media (max-width:810px){
+  .reference p{
+    
+    padding-left:10px;
+  }
+  .reference a{
+   
+  padding: 1rem;
+  }
+  
+  
+}
 
 /*about styles*/
 .aboutdescription{
