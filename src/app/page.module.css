@@ -39,6 +39,9 @@
   .main{
     padding: 5rem 15px 15px 15px;
   }
+  .main3{
+    padding: 2rem 0px 15px 0px;
+  }
 }
 
 .createYourBlog button{
@@ -130,7 +133,7 @@ padding: 3rem;
   grid-template-columns: 1fr 1fr;
 }
 .description h1{
-  padding: 3rem 0 1rem 0;
+  padding: 1rem 0 1rem 0;
   font-size: 3.3rem;
 }
 .aboutdescription p{
