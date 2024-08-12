@@ -28,6 +28,9 @@
   overflow: hidden;
 
 }
+.main3{
+  padding: 1rem 2rem 2rem 2rem;
+}
 .fullmain{
   padding: 3rem 2rem 0rem 2rem;
   width: 100%;
@@ -320,15 +323,14 @@ color: black;
   align-items: center;
 }
 .githubBackground{
-  background-color: black;
+  background-color: white;
 }
-.githubBackground img{
-}
+
 .codepenBackground{
   background-color: white;
 }
 .linkedinBackground{
-  background-color: #0077B5;
+  background-color: white;
 }
 @media (max-width:1300px) {
   .cardsContainer{

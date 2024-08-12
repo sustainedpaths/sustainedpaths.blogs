@@ -150,9 +150,9 @@ export default function Team() {
                                         <i className={styles.quotes}> &quot; I am Batman &quot; </i>
                                     </div>
                                     <div className={styles.socialsCard}>
-                                        <a className={styles.githubBackground} href='#'><img src='/github.png' alt='agrim github' /></a>
-                                        <a className={styles.linkedinBackground} href='#'><img src='/linkedin.png' alt='agrim linkedin' /></a>
-                                        <a className={styles.codepenBackground} href='#'><img src='/codepen.png' alt='agrim codepen' /></a>
+                                        <a className={styles.githubBackground} href='https://github.com/FINESTMOSAIC' target="_blank"><img src='/github.png' alt='agrim github'  /></a>
+                                        <a className={styles.linkedinBackground} href='https://www.linkedin.com/in/agrim-kulshreshtha/' target="_blank"><img src='/linkedin.png' alt='agrim linkedin' /></a>
+                                        <a className={styles.codepenBackground} href='https://agrimk.com/' target="_blank"><img src='/codepen.png' alt='agrim codepen' /></a>
                                     </div>
                                 </div>
                             </div>

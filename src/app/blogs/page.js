@@ -87,7 +87,7 @@ export default function Blog() {
      
   return (
 
-    <main className={styles.main}>
+    <main className={styles.main3}>
       <div className={styles.description}>
       <div className={styles.createYourBlog}>
         <div className={styles.homeGrid}>
