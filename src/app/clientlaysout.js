@@ -24,7 +24,7 @@ export default function ClientLayout({ children }) {
   return (
     <div>
         {loading && <Loader />} {/* Show loader while loading */}
-      <Navbar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+<Navbar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <div className={`content-wrapper ${isMenuOpen ? 'menu-open' : ''}`}>
         {children}
       </div>

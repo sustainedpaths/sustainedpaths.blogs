@@ -1,5 +1,3 @@
-"use client";
-
 import Link from 'next/link';
 import Styles from './common.css'; // Ensure this file exists and contains the correct CSS
 import Image from 'next/image';
@@ -12,6 +10,13 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
+
+  // Function to handle link clicks and close the menu
+  const handleLinkClick = () => {
+    if (isMenuOpen) {
+      toggleMenu(); // Close the menu
+    }
+  };
 
   return (
     <nav className={Styles.nav}>
@@ -39,27 +44,27 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
         )}
         <div className={Styless.forMobile}>
           <div className={Styless.greenDot}></div>
-          <Link href="/">Home</Link>
+          <Link href="/" onClick={handleLinkClick}>Home</Link>
           <img src='/right-chevron.png' alt='Arrow Icon' />
         </div>
         <div className={Styless.forMobile}>
           <div className={Styless.greenDot}></div>
-          <Link href="/about">About</Link>
+          <Link href="/about" onClick={handleLinkClick}>About</Link>
           <img src='/right-chevron.png' alt='Arrow Icon' />
         </div>
         <div className={Styless.forMobile}>
           <div className={Styless.greenDot}></div>
-          <Link href="/refference">Reference</Link>
+          <Link href="/refference" onClick={handleLinkClick}>Reference</Link>
           <img src='/right-chevron.png' alt='Arrow Icon' />
         </div>
         <div className={Styless.forMobile}>
           <div className={Styless.greenDot}></div>
-          <Link href="/#blogs">Blogs</Link>
+          <Link href="/#blogs" onClick={handleLinkClick}>Blogs</Link>
           <img src='/right-chevron.png' alt='Arrow Icon' />
         </div>
         <div className={Styless.forMobile}>
           <div className={Styless.greenDot}></div>
-          <Link href="/about/#team">Our Team</Link>
+          <Link href="/about/#team" onClick={handleLinkClick}>Our Team</Link>
           <img src='/right-chevron.png' alt='Arrow Icon' />
         </div>
         <a className={Styless.forMobileLogout} href="/api/auth/logout">Logout</a>

@@ -21,7 +21,7 @@ nav a{
   }
 nav button{
     position: absolute;
-    top: 110%;
+    top: 110%; 
     left: 0px;
     display: none;
     padding: 10px;

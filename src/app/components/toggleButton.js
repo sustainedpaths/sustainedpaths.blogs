@@ -7,7 +7,6 @@ const ToggleMenuBar = () => {
   const toggleMenuBar = () => {
     setIsToggled(!isToggled);
   };
-
   // Effect to apply styles based on the state
   useEffect(() => {
     const menuBar = document.querySelector('.menubar');
