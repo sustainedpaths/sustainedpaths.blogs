@@ -16,18 +16,15 @@
   background-size: contain;
   background-clip: text;
   -webkit-background-clip: text;
-  
 }
 .main{
   padding: 5rem 2rem 2rem 2rem;
-}
-.main2{
-  padding: 0rem 2rem 0 2rem;
 }
 .main{
   overflow: hidden;
 
 }
+
 
 .fullmain{
   padding: 3rem 2rem 0rem 2rem;
@@ -47,7 +44,6 @@
   font-weight: 500;
   padding: 12px 16px;
   margin: 2rem 0;
-  margin-top: auto;
 }
 .createYourBlog{
   background-color: black;
@@ -103,8 +99,11 @@ padding: 15px;
 
 
 /*reference styles*/
+.reference h1{
+  text-align: center;
+}
 .reference h2{
-  padding: 25px 0 10px 10px;
+  padding: 25px 0 10px 0px;
 }
 .reference p{
   font-size: 18px;
@@ -136,7 +135,6 @@ padding: 3rem;
 }
 .description h1{
   padding: 1rem 0 1rem 0;
-  font-size: 3.3rem;
 }
 .aboutdescription p{
   font-size: 18px;
@@ -241,7 +239,6 @@ padding: 3rem;
 }
 .ourteam h1{
     padding: 3rem 0 1rem 0;
-    font-size: 3.3rem;
 }
 .cardcomp{
   width: 300px;
