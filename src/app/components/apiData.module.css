@@ -67,3 +67,135 @@
 .container::-webkit-scrollbar {
     display: none;
 }
+.mainblog{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 2rem;
+    background-color: white;
+}
+.mainblog {
+    padding: 2rem;
+  }
+  
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .descriptionBlog {
+display: flex;
+justify-content: center; /* Ensure that the form doesn't take up too much space */
+  }
+  
+  .preview {
+    width: 100%;
+    max-width: 600px; /* Ensure it takes up the correct width */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    word-wrap: break-word; /* Handle long words */
+    overflow-wrap: break-word; /* Ensure words break to fit the container */
+    white-space: pre-wrap; /* Maintain whitespace and line breaks */
+    height: auto;
+    box-sizing: border-box; /* Includes padding and border in the width */ /* Prevents overflow beyond container */
+}
+.preview h4, .preview p {
+    margin: 10px 0;
+    font-size: 13px; /* Ensure consistent font size */
+    width: 100%;
+    box-sizing: border-box; /* Ensure they respect container width */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.removebutton{
+    margin-bottom: 10px;
+    background-color:     rgb(51, 143, 118);
+    border: none;
+    border-radius: 5px;
+}
+  
+  .preview h3{
+    margin: 10px 0;
+    font-size: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .preview span{
+    font-family: monospace;
+    padding: 10px;
+    width: 100%;
+    background-color: #333;
+    color: white;
+  }
+.descriptionBlog{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.descriptionBlog input{
+    padding: 15px 20px;
+    font-family: monospace;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddddddab;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.descriptionBlog textarea{
+    padding: 15px 20px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddddddab;
+    border-radius: 2px;
+margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+/* apiData.module.css */
+
+/* apiData.module.css */
+  .mainblog button{
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  .cancleButton{
+    background-color: rgb(255, 52, 52);
+    max-width: max-content;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5),
+      inset 0px 2px 2px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+  }
+  .flexDown{
+    display: flex;
+    flex-direction: column;
+
+  }
+  @media (max-width:882px){
+    .gridContainer{
+        grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width:882px){
+    .gridContainer{
+        grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width:402px){
+    .mainblog {
+        padding: 2rem 15px 2rem 15px;
+      }
+  }
