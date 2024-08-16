@@ -23,6 +23,10 @@ const HomePage = () => {
     }
   };
 
+  const handleCancelClick = () => {
+    setShowBlogSession(false); // Hide BlogSession
+  };
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -49,7 +53,7 @@ const HomePage = () => {
             </div>
             <img className={styles.imagegraphic} src="/graphicy.jpg" alt="Graphic" />
           </div>  
-          {showBlogSession && <BlogSession />}
+          {showBlogSession && <BlogSession onCancel={handleCancelClick} />}
         </div>
       </div>
     </main>

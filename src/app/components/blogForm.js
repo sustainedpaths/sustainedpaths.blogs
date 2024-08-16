@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./apiData.module.css";
 import Styles from "../page.module.css";
 
-export default function Home() {
+export default function BlogSession({ onCancel }) {
   const [sections, setSections] = useState([]);
   const [mainHeading, setMainHeading] = useState("");
   const [mainParagraph, setMainParagraph] = useState("");
@@ -65,7 +65,7 @@ export default function Home() {
                   name="heading"
                   value={section.heading}
                   onChange={(e) => handleInputChange(index, e)}
-                  placeholder="Section Heading"
+                  placeholder="Section Heading..."
                 />
               </div>
               <div className={styles.flexDown}>
@@ -74,7 +74,7 @@ export default function Home() {
                   name="paragraph"
                   value={section.paragraph}
                   onChange={(e) => handleInputChange(index, e)}
-                  placeholder="Section Paragraph"
+                  placeholder="Section Paragraph..."
                   className={styles.paragraph}
                 />
               </div>
@@ -84,7 +84,7 @@ export default function Home() {
           <div className={styles.buttons}>
             <button className={Styles.button} onClick={addSection}>+ Add new Section</button>
             <button className={Styles.button}>Submit</button>
-            <button className={styles.cancleButton}>Cancel</button>
+            <button className={styles.cancleButton} onClick={onCancel}>Cancel</button>
           </div>
         </div>
         <div className={styles.preview}>
@@ -99,7 +99,6 @@ export default function Home() {
             </div>
           ))}
           </div>
-          
         </div>
       </div>
     </main>
