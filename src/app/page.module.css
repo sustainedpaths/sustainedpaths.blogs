@@ -62,6 +62,7 @@
 }
 .homeGrid h1{
   padding-top: 30px;
+  text-align: left;
 }
 .createYourBlog p{
   color: white;
@@ -199,12 +200,14 @@ padding: 3rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
 
   }
-  .gradienttext {
-    text-align: center;
-  }
+.aboutdescription h1{
+  text-align: center;
+}
+.ourteam h1{
+  text-align: center;
+}
   .hronabout{
     width: 100%;
     display: flex;
