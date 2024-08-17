@@ -114,6 +114,7 @@ padding: 15px;
 .reference a{
   color: #f5c536;
 padding: 3rem;
+text-decoration: underline;
 }
 @media (max-width:810px){
   .reference p{
@@ -410,6 +411,9 @@ padding-bottom: 10px;
   justify-content: center;
   align-items: center;
 
+}
+.homePage{
+  transition: all 1s ease-in-out;
 }
 
 

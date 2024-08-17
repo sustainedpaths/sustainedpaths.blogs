@@ -3,6 +3,9 @@ import { useState } from "react";
 import styles from "./apiData.module.css";
 import Styles from "../page.module.css";
 
+// Import the Firebase function
+import { writeBlogData } from '../path-to-your-firebase-file';
+
 export default function BlogSession({ onCancel }) {
   const [sections, setSections] = useState([]);
   const [mainHeading, setMainHeading] = useState("");
@@ -30,6 +33,18 @@ export default function BlogSession({ onCancel }) {
 
   function handleMainParagraphChange(e) {
     setMainParagraph(e.target.value);
+  }
+
+  function handleSubmit() {
+    const title = mainHeading;
+    const description = sections.map(section => section.heading + ": " + section.paragraph).join("\n");
+    const date = new Date().toLocaleDateString();
+    const authorName = "Agrim"; // Replace with dynamic data if needed
+    const vote = "0"; // Initial vote count or whatever value you need
+
+    writeBlogData(title, mainParagraph + "\n" + description, date, authorName, vote);
+
+    alert("Blog submitted successfully!");
   }
 
   return (
@@ -83,21 +98,21 @@ export default function BlogSession({ onCancel }) {
           ))}
           <div className={styles.buttons}>
             <button className={Styles.button} onClick={addSection}>+ Add new Section</button>
-            <button className={Styles.button}>Submit</button>
+            <button className={Styles.button} onClick={handleSubmit}>Submit</button>
             <button className={styles.cancleButton} onClick={onCancel}>Cancel</button>
           </div>
         </div>
         <div className={styles.preview}>
           <span>preview...</span>
           <div className={styles.content}>
-          <h3>{mainHeading}</h3>
-          <p>{mainParagraph}</p>
-          {sections.map((section, index) => (
-            <div key={index}>
-              <h4>{section.heading}</h4>
-              <p>{section.paragraph}</p>
-            </div>
-          ))}
+            <h3>{mainHeading}</h3>
+            <p>{mainParagraph}</p>
+            {sections.map((section, index) => (
+              <div key={index}>
+                <h4>{section.heading}</h4>
+                <p>{section.paragraph}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

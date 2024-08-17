@@ -105,7 +105,8 @@ justify-content: center; /* Ensure that the form doesn't take up too much space 
     white-space: pre-wrap; /* Maintain whitespace and line breaks */
     height: auto;
     box-sizing: border-box; /* Includes padding and border in the width */ /* Prevents overflow beyond container */
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    margin-left: auto;
 }
 .preview h4, .preview p {
     margin: 10px 0;
