@@ -4,7 +4,7 @@ import styles from "./apiData.module.css";
 import Styles from "../page.module.css";
 
 // Import the Firebase function
-import { writeBlogData } from '../path-to-your-firebase-file';
+import { writeBlogData } from './firebasedata.js';
 
 export default function BlogSession({ onCancel }) {
   const [sections, setSections] = useState([]);
