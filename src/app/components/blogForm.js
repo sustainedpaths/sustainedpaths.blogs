@@ -43,8 +43,7 @@ export default function BlogSession({ onCancel }) {
     const vote = "0"; // Initial vote count or whatever value you need
 
     writeBlogData(title, mainParagraph + "\n" + description, date, authorName, vote);
-
-    alert("Blog submitted successfully!");
+    onCancel(); // Close the form after submission
   }
 
   return (
