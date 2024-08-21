@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "./apiData.module.css";
 import Styles from "../page.module.css";
-
+import { useUser } from '@auth0/nextjs-auth0/client';
 // Import the Firebase function
 import { writeBlogData } from './firebasedata.js';
 
@@ -10,7 +10,7 @@ export default function BlogSession({ onCancel }) {
   const [sections, setSections] = useState([]);
   const [mainHeading, setMainHeading] = useState("");
   const [mainParagraph, setMainParagraph] = useState("");
-
+  const { user } = useUser();
   function addSection() {
     setSections([...sections, { heading: "", paragraph: "" }]);
   }
@@ -39,7 +39,7 @@ export default function BlogSession({ onCancel }) {
     const title = mainHeading;
     const description = sections.map(section => section.heading + ": " + section.paragraph).join("\n");
     const date = new Date().toLocaleDateString();
-    const authorName = "Agrim"; // Replace with dynamic data if needed
+    const authorName = user.name; // Replace with dynamic data if needed
     const vote = "0"; // Initial vote count or whatever value you need
 
     writeBlogData(title, mainParagraph + "\n" + description, date, authorName, vote);
