@@ -37,7 +37,14 @@ export default function BlogSession({ onCancel }) {
 
   function handleSubmit() {
     const title = mainHeading;
-    const description = sections.map(section => section.heading + ": " + section.paragraph).join("\n");
+    const description = `
+    <h1>${title}</h1>
+    <p>${mainParagraph}</p>
+    ${sections.map(section => `
+      <h2>${section.heading}</h2>
+      <p>${section.paragraph}</p>
+    `).join('')}
+  `;
     const date = new Date().toLocaleDateString();
     const authorName = user.name; // Replace with dynamic data if needed
     const vote = "0"; // Initial vote count or whatever value you need
