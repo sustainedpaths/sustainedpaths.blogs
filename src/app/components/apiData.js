@@ -2,49 +2,19 @@
 import { useState, useEffect, useRef } from "react";
 import Loader from './loader.js'; // Ensure correct import path
 import styles from './apiData.module.css'; // Import the CSS module for styling
-
-export default function First() {
-    const [articles, setArticles] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+export default function First({ articles = [] }) {
     const containerRef = useRef(null);
-    const intervalRef = useRef(null); // Store the interval ID
-    const isDragging = useRef(false); // Track dragging state
-    const startPos = useRef(0); // Track the initial position on mouse down
-    const scrollLeft = useRef(0); // Track the scroll position on mouse down
-
-    const fetchData = async () => {
-        const config = {
-            method: 'GET',
-            headers: { 'Content-Type': 'application/json' },
-        };
-
-        try {
-            const res = await fetch('/api/data', config);
-            const res_val = await res.json();
-            if (res.ok) {
-                setArticles(res_val.articles);
-            } else {
-                throw new Error(res_val.message || 'Unknown error');
-            }
-        } catch (error) {
-            console.error("Error fetching data:", error);
-            setError(error.message);
-        } finally {
-            setTimeout(() => setLoading(false), 1000);
-        }
-    };
-
-    useEffect(() => {
-        fetchData();
-    }, []);
-
+    const intervalRef = useRef(null);
+    const isDragging = useRef(false);
+    const startPos = useRef(0);
+    const scrollLeft = useRef(0);
+    const loading = articles.length === 0; // Assume loading if articles are empty
     useEffect(() => {
         if (!loading && containerRef.current) {
             const container = containerRef.current;
             let scrollAmount = 0;
-            const cardWidth = 250; // width of a single card
-            const scrollStep = cardWidth + 10; // card width + gap
+            const cardWidth = 250;
+            const scrollStep = cardWidth + 10;
 
             function autoScroll() {
                 scrollAmount += scrollStep;
@@ -57,16 +27,14 @@ export default function First() {
                 });
             }
 
-            intervalRef.current = setInterval(autoScroll, 4000); // start auto-scroll
+            intervalRef.current = setInterval(autoScroll, 4000);
 
-            // Pause auto-scroll on user interaction
             const pauseAutoScroll = () => clearInterval(intervalRef.current);
             const resumeAutoScroll = () => {
                 clearInterval(intervalRef.current);
                 intervalRef.current = setInterval(autoScroll, 4000);
             };
 
-            // Mouse down event to start dragging
             const onMouseDown = (e) => {
                 pauseAutoScroll();
                 isDragging.current = true;
@@ -74,28 +42,24 @@ export default function First() {
                 scrollLeft.current = container.scrollLeft;
             };
 
-            // Mouse leave event to stop dragging
             const onMouseLeave = () => {
                 isDragging.current = false;
                 resumeAutoScroll();
             };
 
-            // Mouse up event to stop dragging
             const onMouseUp = () => {
                 isDragging.current = false;
                 resumeAutoScroll();
             };
 
-            // Mouse move event to handle dragging
             const onMouseMove = (e) => {
                 if (!isDragging.current) return;
                 e.preventDefault();
                 const x = e.pageX - container.offsetLeft;
-                const walk = (x - startPos.current) * 2; // Increase scroll speed if needed
+                const walk = (x - startPos.current) * 2;
                 container.scrollLeft = scrollLeft.current - walk;
             };
 
-            // Touch event handlers for mobile devices
             const onTouchStart = (e) => {
                 pauseAutoScroll();
                 isDragging.current = true;
@@ -116,7 +80,6 @@ export default function First() {
                 resumeAutoScroll();
             };
 
-            // Add event listeners for dragging
             container.addEventListener('mousedown', onMouseDown);
             container.addEventListener('mouseleave', onMouseLeave);
             container.addEventListener('mouseup', onMouseUp);
@@ -136,11 +99,7 @@ export default function First() {
                 container.removeEventListener('touchend', onTouchEnd);
             };
         }
-    }, [loading, articles]);
-
-    if (error) {
-        return <div>Error: {error}</div>;
-    }
+    }, [loading]);
 
     const truncateText = (text, maxLength) => {
         if (text.length <= maxLength) return text;
